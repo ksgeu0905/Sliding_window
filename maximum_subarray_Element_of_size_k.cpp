@@ -7,8 +7,8 @@ void cal_max_element(int arr[],vector<int>&ans,int n,int k){
         if(l.empty())
             l.push_back(arr[z]);
         else{
-            while(!l.empty() && arr[z]>l.front())
-                l.pop_front();
+            while(!l.empty() && arr[z]>l.back())
+                l.pop_back();
             l.push_back(arr[z]);
         }
     }
@@ -18,8 +18,8 @@ void cal_max_element(int arr[],vector<int>&ans,int n,int k){
             l.pop_front();
         i++;j++;
         if(j!=n){
-                while((!l.empty()) && arr[j]>l.front()){
-                        l.pop_front();
+                while((!l.empty()) && arr[j]>l.back()){
+                        l.pop_back();
                 }
                 l.push_back(arr[j]);
             }

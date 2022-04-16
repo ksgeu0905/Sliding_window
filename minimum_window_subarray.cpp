@@ -16,7 +16,7 @@ string minWindow(string s, string t) {
             if(count<l2){
                 if(m.find(s[j])!=m.end()){
                     m[s[j]]--;
-                    if(m[s[j]]==0)
+                    if(m[s[j]]>=0)
                         count++;
                 }
             }
@@ -27,7 +27,7 @@ string minWindow(string s, string t) {
                 }
                 if(m.find(s[i])!=m.end()){
                     m[s[i]]++;
-                    if(m[s[i]]==1)
+                    if(m[s[i]]>=1)
                         count--;
                 }
                 i++;
